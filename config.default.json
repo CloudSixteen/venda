@@ -1,0 +1,8 @@
+{
+    "discord": {
+        "clientId": "",
+        "clientSecret": "",
+        "scope": "identity email",
+        "redirect": "http://localhost:3002/discord/callback"
+    }
+}

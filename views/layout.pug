@@ -1,0 +1,92 @@
+doctype html
+html
+    head
+        title Cloud Sixteen
+
+        link(rel="stylesheet", href="/css/jquery-ui.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
+        link(rel="stylesheet", href="/css/style.css")
+
+        script(type="text/javascript", src="/js/jquery-3.2.1.min.js")
+        script(type="text/javascript", src="/js/jquery-ui.js")
+        script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    body
+        nav
+            .nav-wrapper
+                a.sidenav-trigger(href="#" data-target="hamburger")
+                    i.material-icons menu
+                ul.left.hide-on-med-and-down
+                    li
+                        a(href="/")
+                            i.fa.fa-home.tiny.left
+                            | HOME
+                    li
+                        a(href="https://eden.cloudsixteen.com")
+                            i.fa.fa-user-friends.tiny.left
+                            | FORUMS
+                    li
+                        a(href="https://discord.cloudsixteen.com")
+                            i.fab.fa-discord.tiny.left
+                            | DISCORD
+                ul.right.hide-on-med-and-down
+                    if (!user)
+                        li
+                            a(href="/login")
+                                i.fab.fa-discord.small.left
+                                b LOG IN WITH DISCORD
+                    else
+                        li
+                            a(href="/logout")
+                                i.fa.fa-sign-out-alt.tiny.left
+                                | LOG OUT
+
+        ul#hamburger.sidenav
+            li
+                a(href="/")
+                    i.fa.fa-home.tiny.left
+                    | HOME
+            li
+                a(href="https://eden.cloudsixteen.com")
+                    i.fa.fa-user-friends.tiny.left
+                    | FORUMS
+            li
+                a(href="https://discord.cloudsixteen.com")
+                    i.fab.fa-discord.tiny.left
+                    | DISCORD
+            if (!user)
+                li
+                    a(href="/login")
+                        i.fab.fa-discord.tiny.left
+                        b LOG IN WITH DISCORD
+            else
+                li
+                    a(href="/logout")
+                        i.fa.fa-sign-out-alt.tiny.left
+                        | LOG OUT
+
+        div.container
+            block content-header
+            block content
+            block footer
+                footer
+                    | Copyright &copy; Cloud Sixteen
+
+    script.
+        $(document).ready(function(){
+            const error = "#{error}";
+            const success = "#{success}";
+
+            if (error) {
+                M.toast({html: error, classes: "red center"});
+            }
+
+            if (success) {
+                M.toast({html: success, classes: "green center"});
+            }
+
+            $(".sidenav").sidenav();
+        });

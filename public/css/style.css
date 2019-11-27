@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
+nav {
+    background-color: #14352c;
+    border: 1px solid #175a48;
+    padding: 0 10px;
+}
+
+.sidenav {
+    background-color: #14352c;
+    border: 1px solid #175a48;
+}
+
+nav ul a {
+    font-family: "Oswald",sans-serif;
+    color: #cfc9d6;
+}
+
+.sidenav li > a {
+    font-family: "Oswald",sans-serif;
+    color: #cfc9d6;
+}
+
+.sidenav li>a>i {
+    color: #cfc9d6;
+    margin-right: 4px;
+}
+
+nav ul a:hover {
+    background:#1e4a3e;
+}
+
+.sidenav li>a:hover {
+    background:#1e4a3e;
+    padding-right: 0px;
+}
+
+.brand-logo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url('../images/bg.png');
+}
+
+footer {
+    background: #14352c;
+    border: 1px solid #175a48;
+    padding: 16px;
+    text-align: center;
+    color: #6aa082;
+}
+
+footer a {
+	color: #93d4b9;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.dark-background {
+    background: #1d1d1d;
+    overflow: hidden;
+    border-bottom: 2px solid #106f55;
+    box-shadow: 0px 0px 4px -1px #000;
+    -moz-box-shadow: 0px 0px 4px -1px #000;
+    -webkit-box-shadow: 0px 0px 4px -1px #000;
+    padding: 24px;
+    color: #24c191;
+}
+
+.dark-background h4 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 0px;
+    color: #c3dad3;
+}

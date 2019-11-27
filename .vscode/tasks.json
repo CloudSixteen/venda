@@ -1,0 +1,13 @@
+{
+    "isShellCommand": true,
+    "version": "0.1.0",
+    "command": "gulp",
+    "_runner": "terminal",
+    "tasks": [
+        {
+            "taskName": "serve:watch",
+            "args": [],
+            "isBuildCommand": true
+        }
+    ]
+}
