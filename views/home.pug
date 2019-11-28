@@ -5,5 +5,15 @@ block content
     .row
     .row
         .dark-background.center
-            h4.center Clockwork Schemas
-            span THE NEW STORE IS COMING SOON
+            h4.center Buy a Clockwork Schema License
+            each product, id in products
+                .col.s12.m6
+                    .card
+                        .card-image
+                            img.activator(src="images/" + product.image)
+                            a.btn-floating.halfway-fab.waves-effect.waves-light.green(href="order/" + id)
+                                i.material-icons= (product.price > 0 ? "attach_money" : "get_app")
+                        .card-content.product-card
+                            span.card-title= product.title
+                            h4=(product.price ? "$" + product.price : "FREE")
+                            p= product.description

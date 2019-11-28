@@ -3,6 +3,7 @@ import express from "express";
 import Venda from "./Venda";
 import mongoose from "mongoose";
 import * as fs from "fs";
+import { IVendaConfig } from "./IVendaConfig";
 
 mongoose.connect("mongodb://localhost:27017/Venda", {
     useNewUrlParser: true

@@ -5,6 +5,7 @@ npm-debug.log*
 
 # Venda specific
 config.json
+public/images/products
 
 # Runtime data
 pids

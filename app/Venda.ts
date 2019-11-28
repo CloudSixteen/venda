@@ -4,6 +4,7 @@ import * as requestIp from "request-ip";
 import * as bodyParser from "body-parser";
 import express from "express";
 import session from "express-session";
+import { IVendaConfig } from "./IVendaConfig";
 
 require("http").globalAgent.maxSockets = Infinity;
 

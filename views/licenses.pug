@@ -1,0 +1,18 @@
+extends layout
+
+block content-header
+block content
+    .row
+    .row
+        .dark-background.center
+            h4.center Your Licenses
+            each transaction in transactions
+                .col.s16.m6
+                    .card.small
+                        .card-image
+                            img(src="images/" + products[transaction.productId].image)
+                        .card-content.product-card
+                            span.card-title= products[transaction.productId].title
+                            a.btn.halfway-fab.waves-effect.waves-light.blue(href="license/" + transaction.serviceId)
+                                i.fa.fa-key.tiny.left
+                                span View License Key

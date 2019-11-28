@@ -1,10 +1,11 @@
 import * as mongoose from "mongoose";
 import { IUser } from "./User";
-import { IProduct } from "./Product";
 
 export interface ITransaction extends mongoose.Document {
     user: IUser["_id"];
-    product: IProduct["_id"];
+    serviceId: number;
+    productId: string;
+    invoiceId: number;
 }
 
 export const TransactionSchema = new mongoose.Schema({
@@ -13,8 +14,18 @@ export const TransactionSchema = new mongoose.Schema({
         required: true
     },
 
-    product: {
-        type: mongoose.Schema.Types.ObjectId,
+    serviceId: {
+        type: Number,
+        required: true
+    },
+
+    productId: {
+        type: String,
+        required: true
+    },
+
+    invoiceId: {
+        type: Number,
         required: true
     }
 });

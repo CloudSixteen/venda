@@ -2,7 +2,28 @@
     "discord": {
         "clientId": "",
         "clientSecret": "",
-        "scope": "identity email",
+        "scope": "identify email",
         "redirect": "http://localhost:3002/discord/callback"
-    }
+    },
+    "products": {
+        "example": {
+            "description": "",
+            "image": "products/example.png",
+            "title": "Example",
+            "price": 5
+        }
+    },
+    "paypal": {
+        "username": "",
+        "password": "",
+        "signature": "",
+        "return": "http://localhost:3002/paypal/return",
+        "cancel": "http://localhost:3002/paypal/cancel"
+    },
+    "cax": {
+        "findUrl": "",
+        "addUrl": "",
+        "apiKey": ""
+    },
+    "admins": []
 }

@@ -7,11 +7,12 @@ html
         link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
-        link(rel="stylesheet", href="/css/style.css")
 
         script(type="text/javascript", src="/js/jquery-3.2.1.min.js")
         script(type="text/javascript", src="/js/jquery-ui.js")
         script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+
+        link(rel="stylesheet", href="/css/style.css")
 
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
     body
@@ -32,6 +33,10 @@ html
                         a(href="https://discord.cloudsixteen.com")
                             i.fab.fa-discord.tiny.left
                             | DISCORD
+                    li
+                        a(href="https://wiki.cloudsixteen.com")
+                            i.fa.fa-book.tiny.left
+                            | WIKI
                 ul.right.hide-on-med-and-down
                     if (!user)
                         li
@@ -39,6 +44,15 @@ html
                                 i.fab.fa-discord.small.left
                                 b LOG IN WITH DISCORD
                     else
+                        if (isAdmin)
+                            li
+                                a(href="/admin")
+                                    i.fa.fa-cogs.tiny.left
+                                    | ADMIN
+                        li
+                            a(href="/licenses")
+                                i.fa.fa-key.tiny.left
+                                | LICENSES 
                         li
                             a(href="/logout")
                                 i.fa.fa-sign-out-alt.tiny.left
@@ -57,12 +71,26 @@ html
                 a(href="https://discord.cloudsixteen.com")
                     i.fab.fa-discord.tiny.left
                     | DISCORD
+            li
+                a(href="https://wiki.cloudsixteen.com")
+                    i.fa.fa-book.tiny.left
+                    | WIKI
+
             if (!user)
                 li
                     a(href="/login")
                         i.fab.fa-discord.tiny.left
                         b LOG IN WITH DISCORD
             else
+                if (isAdmin)
+                    li
+                        a(href="/admin")
+                            i.fa.fa-cogs.tiny.left
+                            | ADMIN
+                li
+                    a(href="/licenses")
+                        i.fa.fa-key.tiny.left
+                        | LICENSES 
                 li
                     a(href="/logout")
                         i.fa.fa-sign-out-alt.tiny.left
@@ -73,7 +101,8 @@ html
             block content
             block footer
                 footer
-                    | Copyright &copy; Cloud Sixteen
+                    | Copyright &copy; <a href="https://cloudsixteen.com">Cloud Sixteen</a>
+        .row
 
     script.
         $(document).ready(function(){

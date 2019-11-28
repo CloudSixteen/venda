@@ -31,6 +31,15 @@ nav ul a:hover {
     background:#1e4a3e;
 }
 
+.product-card {
+    background: #222;
+}
+
+.product-card p {
+    color: #69b79f;
+    font-style: italic;
+}
+
 .sidenav li>a:hover {
     background:#1e4a3e;
     padding-right: 0px;
