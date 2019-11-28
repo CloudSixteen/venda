@@ -1,6 +1,7 @@
 export interface IVendaConfigProduct {
     description: string;
     orderLimit?: number;
+    roleId?: string;
     image: string;
     title: string;
     price: number;
@@ -14,6 +15,8 @@ export interface IVendaConfig {
     discord: {
         clientId: string;
         clientSecret: string;
+        botToken: string;
+        serverId: string;
         scope: string;
         redirect: string;
     };

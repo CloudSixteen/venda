@@ -24,6 +24,7 @@
     "dateformat": "^2.0.0",
     "del": "^2.2.2",
     "discord-oauth2": "^2.0.1",
+    "discord.js": "^11.5.1",
     "echarts": "^3.6.1",
     "express": "^4.15.3",
     "express-session": "^1.15.5",

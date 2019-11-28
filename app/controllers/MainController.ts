@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
-import Discord from "discord-oauth2";
+import { Client, Message, TextChannel, Channel } from "discord.js";
+import DiscordAuth from "discord-oauth2";
 import Venda from "../Venda";
 import User, { IUser } from "../models/User";
 import { IVendaConfig, IVendaConfigProduct } from "../IVendaConfig";
@@ -11,16 +12,18 @@ import { ICAXResponse } from "../ICAXResponse";
 class MainController {
     private _router: Router;
     private _venda: Venda;
-    private _oauth: Discord;
+    private _auth: DiscordAuth;
     private _config: IVendaConfig;
     private _paypal: PayPal;
+    private _discord: Client;
 
     public constructor(venda: Venda, config: IVendaConfig) {
         this._venda = venda;
         this._router = Router();
-        this._oauth = new Discord();
+        this._auth = new DiscordAuth();
         this._config = config;
         this._paypal = PayPal.init(config.paypal.username, config.paypal.password, config.paypal.signature, config.paypal.return, config.paypal.cancel, false);
+        this._discord = new Client();
 
         this._router.get("/", this.getRouteHome.bind(this));
         this._router.get("/logout", this.getRouteLogout.bind(this));
@@ -31,6 +34,8 @@ class MainController {
         this._router.get("/discord/callback", this.getDiscordCallback.bind(this));
         this._router.get("/paypal/return", this.getPayPalReturn.bind(this));
         this._router.get("/paypal/cancel", this.getPayPalCancel.bind(this));
+
+        this.startDiscordBot();
     }
 
     public get router(): Router {
@@ -43,7 +48,7 @@ class MainController {
 
     public async validateSession(req: Request): Promise<IUser> {
         if (req.session.discordToken) {
-            const discordUser = await this._oauth.getUser(req.session.discordToken);
+            const discordUser = await this._auth.getUser(req.session.discordToken);
 
             if (discordUser) {
                 return await User.findOne({
@@ -51,6 +56,69 @@ class MainController {
                 }).exec();
             }
         }
+    }
+
+    private startDiscordBot(): void {
+        this._discord.on("ready", () => {
+
+        });
+
+        this._discord.on("message", async(message: Message) => {
+            const discordId = message.author.id;
+            const commandName = "!customer";
+
+            if (message.content.substr(0, commandName.length) === commandName) {
+                const paramString = message.content.substr(commandName.length).trim();
+                const matches = paramString.match(/"[^"\\]*(?:\\.[^"\\]*)*"|'[^'\\]*(?:\\.[^'\\]*)*'|```((.|\s)*?)```|\S+/g);
+                let params: string[] = [];
+
+                if (matches) {
+                    params = matches.map(v => v.replace(/^"|"$|^'|'$|^```(\S*\n?)|```$/g, ""));
+                }
+
+                const user = await User.findOne({
+                    discordId: discordId
+                });
+
+                if (user) {
+                    const transactions = await Transaction.find({
+                        user: user._id
+                    });
+
+                    if (transactions.length > 0) {
+                        let roleChanged = false;
+                        const member = message.guild.member(message.author);
+                        const roles = member.roles.array();
+
+                        for (let i = 0; i < transactions.length; i++) {
+                            const transaction = transactions[i];
+                            const productId = transaction.productId;
+                            const product = this._config.products[productId];
+
+                            if (product && product.roleId) {
+                                const role = message.guild.roles.get(product.roleId);
+
+                                if (role && !member.roles.has(role.id)) {
+                                    message.channel.send(message.author.username + " has claimed their " + role.name + " role!");
+                                    roleChanged = true;
+                                    roles.push(role);
+                                }
+                            }
+                        }
+
+                        if (roleChanged) {
+                            await member.setRoles(roles);
+                        }
+                    }
+                }
+            }
+        });
+
+        process.on("exit", () => {
+            this._discord.destroy()
+        });
+
+        this._discord.login(this._config.discord.botToken);
     }
 
     private async getRouteLicense(req: Request, res: Response): Promise<void> {
@@ -299,7 +367,7 @@ class MainController {
         const REDIRECT = this._config.discord.redirect;
         const SCOPE = this._config.discord.scope;
 
-        const discordToken = await this._oauth.tokenRequest({
+        const discordToken = await this._auth.tokenRequest({
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
             code: req.query.code,
@@ -309,7 +377,7 @@ class MainController {
         })
 
         if (discordToken) {
-            const discordUser = await this._oauth.getUser(discordToken.access_token);
+            const discordUser = await this._auth.getUser(discordToken.access_token);
 
             if (discordUser) {
                 const user = await User.findOne({

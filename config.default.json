@@ -2,12 +2,15 @@
     "discord": {
         "clientId": "",
         "clientSecret": "",
+        "botToken": "",
+        "serverId": "",
         "scope": "identify email",
         "redirect": "http://localhost:3002/discord/callback"
     },
     "products": {
         "example": {
             "description": "",
+            "roleId": "",
             "image": "products/example.png",
             "title": "Example",
             "price": 5
