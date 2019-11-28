@@ -20,7 +20,7 @@ class MainController {
         this._router = Router();
         this._oauth = new Discord();
         this._config = config;
-        this._paypal = PayPal.init(config.paypal.username, config.paypal.password, config.paypal.signature, config.paypal.return, config.paypal.cancel, true);
+        this._paypal = PayPal.init(config.paypal.username, config.paypal.password, config.paypal.signature, config.paypal.return, config.paypal.cancel, false);
 
         this._router.get("/", this.getRouteHome.bind(this));
         this._router.get("/logout", this.getRouteLogout.bind(this));
