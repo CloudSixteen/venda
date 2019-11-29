@@ -99,7 +99,7 @@ class MainController {
                                 const role = message.guild.roles.get(product.roleId);
 
                                 if (role && !member.roles.has(role.id)) {
-                                    message.channel.send(message.author.username + " has claimed their " + role.name + " role!");
+                                    message.channel.send("<@" + message.author.id + "> has claimed their " + role.name + " role!");
                                     roleChanged = true;
                                     roles.push(role);
                                 }
@@ -109,13 +109,13 @@ class MainController {
                         if (roleChanged) {
                             await member.setRoles(roles);
                         } else {
-                            message.channel.send("Sorry, " + message.author.username + ", you don't qualify for any customer roles.");
+                            message.channel.send("Sorry, <@" + message.author.id + ">, you don't qualify for any customer roles.");
                         }
                     } else {
-                        message.channel.send("Sorry, " + message.author.username + ", you haven't purchased any licenses.");
+                        message.channel.send("Sorry, <@" + message.author.id + ">, you haven't purchased any licenses.");
                     }
                 } else {
-                    message.channel.send("Sorry, " + message.author.username + ", you haven't logged in to the store before.");
+                    message.channel.send("Sorry, <@" + message.author.id + ">, you haven't logged in to the store before.");
                 }
             }
         });

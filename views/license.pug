@@ -6,9 +6,19 @@ block content
     .row
         .dark-background.center
             .col.s12.m12
-                .card
-                    .card-content.product-card
-                        span.card-title= product.title
-                        p= license
-                        hr
-                        | For setup and installation instructions visit <a href="https://wiki.cloudsixteen.com">the Cloud Sixteen Wiki</a>, specifically the <a href="https://wiki.cloudsixteen.com/customers/getting-started">Getting Started</a> guide.
+                h4.card-title= product.title
+                p.license-key= license
+                hr
+                p
+                    | For setup and installation instructions visit <a href="https://wiki.cloudsixteen.com">the Cloud Sixteen Wiki</a>, specifically the <a href="https://wiki.cloudsixteen.com/customers/getting-started">Getting Started</a> guide.
+                p.license-info
+                    | When updating make sure you overwrite everything, including lua/bin/gmsv_cloudauthx.dll! If you don't do this, it will not work! To be sure, delete lua/bin/gmsv_cloudauthx_win32.dll on your server first, before overwriting with the new files! Make sure your server is always stopped before performing an upgrade.
+                .row
+                    p.license-warning
+                        | Cloud Sixteen do not offer refunds for our services after a period of 3 days. If you file a PayPal chargeback, instead of requesting a formal refund within the 3 day period, you will face a permanent ban from all Cloud Sixteen services including all running Clockwork servers.
+                    h4
+                        | INSTALLATION & COMMUNITY
+                    ul.license-info
+                        li 1. Visit the <a href="https://wiki.cloudsixteen.com/customers/getting-started">Getting Started</a> page on the <a href="https://wiki.cloudsixteen.com">Cloud Sixteen Wiki</a> to find out how to download, install, and configure your schema.
+                        li 2. Join the <a href="https://eden.cloudsixteen.com">Cloud Sixteen Forums</a> to show off your server, get support, find plugins, or share your modifications.
+                        li 3. Join the <a href="https://discord.cloudsixteen.com">Cloud Sixteen Discord</a> to engage with the Clockwork development community.

@@ -64,7 +64,7 @@ footer {
     color: #6aa082;
 }
 
-footer a, p a, h5 a {
+footer a, p a, h5 a, li a {
 	color: #93d4b9;
 	text-decoration: none;
 }
@@ -89,4 +89,36 @@ footer a:hover {
     font-size: 1.5em;
     margin-top: 0px;
     color: #c3dad3;
+}
+
+
+.toast.red {
+    font-family: "Roboto", sans-serif !important;
+    background: #A71010 !important;
+    color: #FFA1A1 !important;
+}
+
+.toast.green {
+    font-family: "Roboto", sans-serif !important;
+    background: rgb(16, 167, 104) !important;
+    color: rgb(161, 255, 227) !important;
+}
+
+hr {
+    border-color: #95ebd1;
+}
+
+.license-key {
+    font-size: 1.1em;
+    background: #14352c;
+    padding: 16px;
+    border: 1px dashed #83d4ac;
+}
+
+.license-info {
+    color: #77a77c;
+}
+
+.license-warning {
+    color: #a78334;
 }
