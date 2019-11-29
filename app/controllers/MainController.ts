@@ -108,8 +108,14 @@ class MainController {
 
                         if (roleChanged) {
                             await member.setRoles(roles);
+                        } else {
+                            message.channel.send("Sorry, " + message.author.username + ", you don't qualify for any customer roles.");
                         }
+                    } else {
+                        message.channel.send("Sorry, " + message.author.username + ", you haven't purchased any licenses.");
                     }
+                } else {
+                    message.channel.send("Sorry, " + message.author.username + ", you haven't logged in to the store before.");
                 }
             }
         });

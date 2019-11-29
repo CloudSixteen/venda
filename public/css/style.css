@@ -64,7 +64,7 @@ footer {
     color: #6aa082;
 }
 
-footer a, p a {
+footer a, p a, h5 a {
 	color: #93d4b9;
 	text-decoration: none;
 }
