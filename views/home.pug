@@ -4,11 +4,12 @@ block content-header
 block content
     .row
     .row
-        .dark-background.center
-            h5 You need to <a href="https://store2.cloudsixteen.com">login to the old store</a> to view any previously purchased license keys.
+        .dark-background.center.notice
+            h5!= __("notice.legacy")
+            span!= __("notice.paymentIssues")
     .row
         .dark-background.center
-            h4.center Buy a Clockwork Schema License
+            h4.center= __("header.buyLicense")
             each product, id in products
                 .col.s12.m6
                     .card
@@ -16,8 +17,8 @@ block content
                             a(href="order/" + id)
                                 img.activator(src="images/" + product.image)
                             a.btn-floating.halfway-fab.waves-effect.waves-light.green(href="order/" + id)
-                                i.material-icons= (product.price > 0 ? "attach_money" : "get_app")
+                                i.material-icons=(product.price > 0 ? "attach_money" : "get_app")
                         .card-content.product-card
                             span.card-title= product.title
-                            h4=(product.price ? "$" + product.price : "FREE")
+                            h4=(product.price ? "$" + product.price : __("free"))
                             p= product.description

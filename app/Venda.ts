@@ -5,6 +5,7 @@ import * as bodyParser from "body-parser";
 import express from "express";
 import session from "express-session";
 import { IVendaConfig } from "./IVendaConfig";
+import i18n from "i18n-x";
 
 require("http").globalAgent.maxSockets = Infinity;
 
@@ -26,6 +27,9 @@ class Venda {
         this._app.use(bodyParser.json());
         this._app.use(bodyParser.urlencoded({extended: true}));
         this._app.use(requestIp.mw());
+        this._app.use(i18n({
+            locales: ["en", "ru"]
+        }));
         this._app.use(session({
             saveUninitialized: true,
             resave: false,

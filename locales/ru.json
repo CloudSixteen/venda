@@ -1,0 +1,17 @@
+{
+    "lang": "ru",
+    "title": "Cloud Sixteen Store",
+    "notice.legacy": "Вам необходимо <a href='https://store2.cloudsixteen.com'> войти в старое хранилище </a>, чтобы просмотреть все ранее приобретенные лицензионные ключи.",
+    "notice.paymentIssues": "Если у вас возникли проблемы с приобретением ключа, свяжитесь с <b> kurozael#7601</b> на <a href='https://discord.cloudsixteen.com'> Cloud Sixteen Discord </a>.",
+    "header.buyLicense": "Купить лицензию",
+    "btn.viewLicenseKey": "Посмотреть лицензию",
+    "free": "СВОБОДНЫЙ",
+    "nav.home": "ГЛАВНАЯ",
+    "nav.forums": "ФОРУМЫ",
+    "nav.discord": "DISCORD",
+    "nav.wiki": "WIKI",
+    "nav.admin": "ADMIN",
+    "nav.licenses": "МОИ ЛИЦЕНЗИИ",
+    "nav.logout": "ВЫЙТИ",
+    "nav.login": "ВОЙТИ С DISCORD"
+}

@@ -33,6 +33,7 @@
     "gulp-tslint": "^8.1.0",
     "gulp-typescript": "^3.1.7",
     "gulp-uglify": "^3.0.0",
+    "i18n-x": "^0.1.6",
     "jade": "^1.11.0",
     "jquery": "^3.2.1",
     "marked": "^0.3.6",

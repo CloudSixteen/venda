@@ -1,7 +1,7 @@
 doctype html
-html
+html(lang=__("lang"))
     head
-        title Cloud Sixteen
+        title=__("title")
 
         link(rel="stylesheet", href="/css/jquery-ui.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
@@ -24,77 +24,77 @@ html
                     li
                         a(href="/")
                             i.fa.fa-home.tiny.left
-                            | HOME
+                            span= __("nav.home")
                     li
                         a(href="https://eden.cloudsixteen.com")
                             i.fa.fa-user-friends.tiny.left
-                            | FORUMS
+                            span= __("nav.forums")
                     li
                         a(href="https://discord.cloudsixteen.com")
                             i.fab.fa-discord.tiny.left
-                            | DISCORD
+                            span= __("nav.discord")
                     li
                         a(href="https://wiki.cloudsixteen.com")
                             i.fa.fa-book.tiny.left
-                            | WIKI
+                            span= __("nav.wiki")
                 ul.right.hide-on-med-and-down
                     if (!user)
                         li
-                            a(href="/login")
+                            a(href="/login").login
                                 i.fab.fa-discord.small.left
-                                b LOG IN WITH DISCORD
+                                span= __("nav.login")
                     else
                         if (isAdmin)
                             li
                                 a(href="/admin")
                                     i.fa.fa-cogs.tiny.left
-                                    | ADMIN
+                                span= __("nav.admin")
                         li
                             a(href="/licenses")
                                 i.fa.fa-key.tiny.left
-                                | LICENSES 
+                                span= __("nav.licenses")
                         li
                             a(href="/logout")
                                 i.fa.fa-sign-out-alt.tiny.left
-                                | LOG OUT
+                                span= __("nav.logout")
 
         ul#hamburger.sidenav
-            li
-                a(href="/")
-                    i.fa.fa-home.tiny.left
-                    | HOME
-            li
-                a(href="https://eden.cloudsixteen.com")
-                    i.fa.fa-user-friends.tiny.left
-                    | FORUMS
-            li
-                a(href="https://discord.cloudsixteen.com")
-                    i.fab.fa-discord.tiny.left
-                    | DISCORD
-            li
-                a(href="https://wiki.cloudsixteen.com")
-                    i.fa.fa-book.tiny.left
-                    | WIKI
-
             if (!user)
                 li
-                    a(href="/login")
+                    a(href="/login").login
                         i.fab.fa-discord.tiny.left
-                        b LOG IN WITH DISCORD
+                        span= __("nav.login")
             else
                 if (isAdmin)
                     li
                         a(href="/admin")
                             i.fa.fa-cogs.tiny.left
-                            | ADMIN
+                            span= __("nav.admin")
                 li
                     a(href="/licenses")
                         i.fa.fa-key.tiny.left
-                        | LICENSES 
+                        span= __("nav.licenses")
                 li
                     a(href="/logout")
                         i.fa.fa-sign-out-alt.tiny.left
-                        | LOG OUT
+                        span= __("nav.logout")
+
+            li
+                a(href="/")
+                    i.fa.fa-home.tiny.left
+                    span= __("nav.home")
+            li
+                a(href="https://eden.cloudsixteen.com")
+                    i.fa.fa-user-friends.tiny.left
+                    span= __("nav.forums")
+            li
+                a(href="https://discord.cloudsixteen.com")
+                    i.fab.fa-discord.tiny.left
+                    span= __("nav.discord")
+            li
+                a(href="https://wiki.cloudsixteen.com")
+                    i.fa.fa-book.tiny.left
+                    span= __("nav.wiki")
 
         div.container
             block content-header

@@ -172,6 +172,7 @@ class MainController {
         const product = this._config.products[transaction.productId];
 
         res.render("license", {
+            locale: req.i18n.getLocale(),
             isAdmin: this.isUserAdmin(user),
             license: caxResponse.serial,
             product: product,
@@ -241,6 +242,7 @@ class MainController {
         req.session.error = undefined;
 
         res.render("home", {
+            locale: req.i18n.getLocale(),
             success: success,
             error: error,
             isAdmin: this.isUserAdmin(user),
@@ -268,6 +270,7 @@ class MainController {
         });
        
         res.render("licenses", {
+            locale: req.i18n.getLocale(),
             success: success,
             error: error,
             isAdmin: this.isUserAdmin(user),

@@ -122,3 +122,19 @@ hr {
 .license-warning {
     color: #a78334;
 }
+
+.notice span {
+    color: #a78334;
+}
+
+.notice b {
+    color: #caa452;
+}
+
+.notice span a {
+    color: #93d4b9;
+}
+
+.login, .login i {
+    color: #a8b5e6 !important;
+}
