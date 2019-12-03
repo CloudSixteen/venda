@@ -1,0 +1,17 @@
+{
+    "lang": "de",
+    "title": "Cloud Sixteen Store",
+    "notice.legacy": "<a href='https://store2.cloudsixteen.com'>Beim alten Store anmelden</a> um bereits gekaufte Produktschlüssel einzusehen.",
+    "notice.paymentIssues": "Bei Problemen bezüglich des Kaufes von Produktschlüsseln kontaktiere bitte <b>kurozael#7601</b> im <a href='https://discord.cloudsixteen.com'>Cloud Sixteen Discord</a>.",
+    "header.buyLicense": "Clockwork Schema Lizenz kaufen",
+    "btn.viewLicenseKey": "Lizenzschlüssel einsehen",
+    "free": "GRATIS",
+    "nav.home": "HOME",
+    "nav.forums": "FORUM",
+    "nav.discord": "DISCORD",
+    "nav.wiki": "WIKI",
+    "nav.admin": "ADMIN",
+    "nav.licenses": "MEINE LIZENZEN",
+    "nav.logout": "LOGOUT",
+    "nav.login": "LOGIN ÜBER DISCORD"
+}

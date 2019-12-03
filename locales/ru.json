@@ -1,17 +1,17 @@
 {
     "lang": "ru",
-    "title": "Cloud Sixteen Store",
-    "notice.legacy": "Если вам необходимо просмотреть все ранее приобретенные лицензионные ключи - <a href='https://store2.cloudsixteen.com'>войдите в старую версию магазина</a>",
-    "notice.paymentIssues": "Если у вас возникли проблемы с приобретением ключа, пожалуйста, свяжитесь с <b>kurozael#7601</b> в <a href='https://discord.cloudsixteen.com'>Cloud Sixteen Discord</a>.",
-    "header.buyLicense": "Приобрести схему Clockwork",
-    "btn.viewLicenseKey": "Посмотреть лицензионные ключи",
+    "title": "Магазин Cloud Sixteen",
+    "notice.legacy": "Вам необходимо <a href='https://store2.cloudsixteen.com/%27%3Eвойти в старый магазин,</a> чтобы посмотреть ранее купленные Вами ключи.",
+    "notice.paymentIssues": "Если у Вас возникли какие-нибудь проблемы с покупкой ключа, пожалуйста свяжитесь с <b>kurozael#7601</b> через <a href='https://discord.cloudsixteen.com'>Сервер-Discord Cloud Sixteen</a>.",
+    "header.buyLicense": "Купить лицензию схемы Clockwork",
+    "btn.viewLicenseKey": "Показать лицензионный ключ",
     "free": "БЕСПЛАТНО",
     "nav.home": "ГЛАВНАЯ",
     "nav.forums": "ФОРУМ",
     "nav.discord": "DISCORD",
-    "nav.wiki": "ВИКИПЕДИЯ",
-    "nav.admin": "АДМИНИСТРАЦИЯ",
-    "nav.licenses": "МОИ ЛИЦЕНЗИИ",
+    "nav.wiki": "WIKI",
+    "nav.admin": "ADMIN",
+    "nav.licenses": "МОИ ПОКУПКИ",
     "nav.logout": "ВЫЙТИ",
-    "nav.login": "ВОЙТИ С DISCORD"
+    "nav.login": "ВОЙТИ ЧЕРЕЗ DISCORD"
 }

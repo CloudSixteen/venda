@@ -1,0 +1,17 @@
+{
+    "lang": "ja",
+    "title": "Cloud Sixteenの売店",
+    "notice.legacy": "もう買ったキーを見るように前の売店 <a href='https://store2.cloudsixteen.com/%27%3Eにロゲインするのは,</a> 必要です。",
+    "notice.paymentIssues": "キーを買う時、問題を直面すると  <b>kurozael#7601</b> に <a href='https://discord.cloudsixteen.com'>Discord Cloud Sixteenで質問してください。</a>.",
+    "header.buyLicense": "ClockworkのSchemaのキーを買う",
+    "btn.viewLicenseKey": "気を見せる",
+    "free": "無料",
+    "nav.home": "ホーム",
+    "nav.forums": "フォーラム",
+    "nav.discord": "DISCORD",
+    "nav.wiki": "WIKI",
+    "nav.admin": "ADMIN",
+    "nav.licenses": "購入物",
+    "nav.logout": "ログアウト",
+    "nav.login": "DISCORDでロゲイン"
+}
