@@ -28,7 +28,7 @@ class Venda {
         this._app.use(bodyParser.urlencoded({extended: true}));
         this._app.use(requestIp.mw());
         this._app.use(i18n({
-            locales: ["en", "ru"]
+            locales: ["en", "ru", "se"]
         }));
         this._app.use(session({
             saveUninitialized: true,
