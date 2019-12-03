@@ -1,0 +1,17 @@
+{
+    "lang": "se",
+    "title": "Cloud Sixteen Butik",
+    "notice.legacy": "Du behöver <a href='https://store2.cloudsixteen.com'>logga in på den gamla butiken</a> för att kunna se gamla betalda licenser.",
+    "notice.paymentIssues": "Om du har problem vid köp av en nyckel, vänligen kontakta <b>kurozael#7601</b> på <a href='https://discord.cloudsixteen.com'>Cloud Sixteen Discord</a>.",
+    "header.buyLicense": "Köp ett Clockwork Schema Licens",
+    "btn.viewLicenseKey": "Visa Licensnyckel",
+    "free": "GRATIS",
+    "nav.home": "HEM",
+    "nav.forums": "FORUMS",
+    "nav.discord": "DISCORD",
+    "nav.wiki": "WIKI",
+    "nav.admin": "ADMIN",
+    "nav.licenses": "MINA LICENSER",
+    "nav.logout": "LOGGA OUT",
+    "nav.login": "LOGGA IN MED DISCORD"
+}
