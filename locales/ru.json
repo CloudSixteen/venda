@@ -1,7 +1,7 @@
 {
     "lang": "ru",
     "title": "Магазин Cloud Sixteen",
-    "notice.legacy": "Вам необходимо <a href='https://store2.cloudsixteen.com/%27%3Eвойти в старый магазин,</a> чтобы посмотреть ранее купленные Вами ключи.",
+    "notice.legacy": "Вам необходимо <a href='https://store2.cloudsixteen.com'>войти в старый магазин,</a> чтобы посмотреть ранее купленные Вами ключи.",
     "notice.paymentIssues": "Если у Вас возникли какие-нибудь проблемы с покупкой ключа, пожалуйста свяжитесь с <b>kurozael#7601</b> через <a href='https://discord.cloudsixteen.com'>Сервер-Discord Cloud Sixteen</a>.",
     "header.buyLicense": "Купить лицензию схемы Clockwork",
     "btn.viewLicenseKey": "Показать лицензионный ключ",
