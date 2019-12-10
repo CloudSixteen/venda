@@ -1,7 +1,7 @@
 {
     "lang": "cs",
     "title": "Cloud Sixteen Obchod",
-    "notice.legacy": "Potřebujete se<a href='https://store2.cloudsixteen.com/%27%3Epřihlásit do starého obchodu,</a> aby jste zobrazili jakékoli předtím zakoupené licenční klíče.",
+    "notice.legacy": "Potřebujete se<a href='https://store2.cloudsixteen.com'>přihlásit do starého obchodu,</a> aby jste zobrazili jakékoli předtím zakoupené licenční klíče.",
     "notice.paymentIssues": "Pokud se vyskytnou problémy s platbou, kontaktujte <b>kurozael#7601</b> na <a href='https://discord.cloudsixteen.com'>Cloud Sixteen Discord</a>.",
     "header.buyLicense": "Koupit Licenci Clockwork na schéma",
     "btn.viewLicenseKey": "Zobrazit licenční klíč",
