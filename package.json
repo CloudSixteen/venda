@@ -20,7 +20,7 @@
     "body-parser": "^1.17.2",
     "browserify": "^14.4.0",
     "chartjs": "^0.3.24",
-    "d3": "^4.9.1",
+    "d3": "^7.6.1",
     "dateformat": "^2.0.0",
     "del": "^2.2.2",
     "discord-oauth2": "^2.0.1",
